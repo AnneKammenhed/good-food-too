@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Booking
 
-# Register your models here.
+
+# add Booking model to admin panel
+
+admin.site.register(Booking)

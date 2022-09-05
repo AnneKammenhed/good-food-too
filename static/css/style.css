@@ -15,7 +15,7 @@ body {
 #hero-image {
     height: 800px;
     width: 100%;
-    background: url('../images/hero.JPG') no-repeat center;
+    background:  #445261 no-repeat center;
 }
 
 #cover-text, #cover-text h2 {
@@ -82,8 +82,8 @@ body {
     background-color: #23BBBB;
 }
 
-.author {
-    color: white;
+.guest {
+    color: black;
     margin: 4px;
     text-transform: uppercase;
 }

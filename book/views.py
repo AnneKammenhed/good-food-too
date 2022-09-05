@@ -6,7 +6,7 @@ from .models import Booking
 
 # view to see the bookings tried FormView 
 class BookingView(generic.ListView):
-    template = 'index.html'
+    template_name = 'index.html'
     model = Booking
     queryset = Booking.objects.order_by("-booking_day")
 #    success_url = '/Thanks for booking!/'

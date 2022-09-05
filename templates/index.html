@@ -1,59 +1,18 @@
-<!--{% load crispy_form_tags %}-->
-
 {% extends "base.html" %}
 
 {% block content %}
 
-<section id="hero-outer">
-
-    <div id="hero-image">
-        <div id="cover-text">
-            <h2 class="text-white">Book Your table here:</h2>
-            <div class="container-fluid">
-                <div class="row">-->
-                    <!-- Booking Column -->
-                    <div class="col-12 mt-3 left">
-                        <div class="row">
-                            <form method="post" >
-                                <!-- {% csrf_token="post" %}
-                                {{form|crispy}}
-                                {{form.number_of_guests|as_crispy_field}}-->
-
-                                {% for booking in booking_view %}
-                                    <form action="/booking/" method="post">
-                                        <label for="number_of_guests">How many guests?<i class="fa-solid fa-users"></i></label>
-                                        <input id="number_of_guests" type="text" value="{{ number_of_guests }}"> 
-                                        <input type="submit" value="OK">
-
-                                        <label for="booking_day">What day do you want to book a table?<i class="fa-regular fa-calendar"></i></label>
-                                        <input id="booking_day" type="text" value="{{ booking_day }}"> 
-                                        <input type="submit" value="OK">
-
-                                        <label for="booking_time">Do you want to eat early or late?<i class="fa-regular fa-clock"></i></label>
-                                        <input id="booking_time" type="text" value="{{ booking_time }}"> 
-                                        <input type="submit" value="OK">
-
-                                        <label for="booking_time">What's your name?<i class="fa-regular fa-user"></i></label>
-                                        <input id="booking_time" type="text" value="{{ booking_time }}"> 
-                                        <input type="submit" value="OK">
-
-                                        <label for="guest_email">Email?<i class="fa-regular fa-envelope"></i></label>
-                                        <input id="guest_email" type="email" value="{{ guest_email }}"> 
-                                        <input type="submit" value="OK">
-
-                                        <label for="allergies">Do you have any allergies?<i class="fa-solid fa-hand-dots"></i></label>
-                                        <input id="allergies" type="text" value="{{ allergies }}"> 
-                                        <input type="submit" value="OK">
-                                    </form>                                
-                                {% endfor %}
-                            </form>
-                        </div>
-                    </div>
-                </div>
+<div class="container-fluid">
+    
+    <h2 id="cover-text">Hej!</h2>
+    <div class="row">
+        {% for booking in booking_view %}
+        <div class="image-container">
+            <div class="image-flash">
+                <p class="guest">Guest: {{ booking.guest }}</p>
             </div>
         </div>
+        {% endfor %}
     </div>
-   
-</section>-->
-
+</div>
 {% endblock %}

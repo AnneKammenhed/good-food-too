@@ -18,6 +18,12 @@ body {
     background:  #445261 no-repeat center;
 }
 
+/* form where input from backend goes */
+#red {
+    height:100px;
+    background: red;
+}
+
 #cover-text, #cover-text h2 {
     color: rgb(34, 33, 33);
 }

@@ -9,27 +9,24 @@
                 <div class="card-body">
                     <h2 id="cover-text">Book a table:</h2>
                      
-                    <form action="" method="post">
+                    <form id="red" action="" method="post">
                         {% csrf_token %}
-                        <table>
-                        {{ form.as_table }}
-                        </table>
+                        {{ booking_form }}
                         <input type="submit" value="Send message">
                     </form>
 
                     <form action="book_urls" method="post">
                         <label for="booking_day">What day do you want to book a table?<i class="fa-regular fa-calendar"></i></label>
-                        <input id="booking_day" list="{{ booking_day }}" value="{{ booking_day }}"> 
+                        <input id="booking_day" list="{{ booking_form.booking_day }}" value="{{ booking_form.booking_day }}"> 
                         
                         <label for="booking_time">Do you want to eat early or late? <i class="fa-regular fa-clock"></i></label>
-                        <input id="booking_time" type="text" value="{{ booking_time }}"> 
+                        <input id="booking_time" list="{{ booking.booking_time }}" value="{{ booking.booking_time }}"> 
                        
                         <label for="number_of_guests">How many guests? <i class="fa-solid fa-users"></i></label>
-                        <input id="number_of_guests" type="text" value="{{ number_of_guests }}">
+                        <input id="number_of_guests" list="{{ booking.number_of_guests }}" value="{{ booking.number_of_guests }}">
 
                         <label for="guest">What's your name? <i class="fa-regular fa-user"></i></label>
-                        <input id="guest" type="text" value="{{ guest }}">
-
+                        <input id="guest" type="text" value="{{ booking.guest }}">
 
                         <label for="guest_email">Email? <i class="fa-regular fa-envelope"></i></label>
                         <input id="guest_email" type="email" value="{{ guest_email }}">

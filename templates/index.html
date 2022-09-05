@@ -1,24 +1,25 @@
-{% load crispy_form_tags %}
+<!--{% load crispy_form_tags %}-->
 
 {% extends "base.html" %}
 
 {% block content %}
 
-<!--<section id="hero-outer">
+<section id="hero-outer">
+
     <div id="hero-image">
         <div id="cover-text">
             <h2 class="text-white">Book Your table here:</h2>
             <div class="container-fluid">
                 <div class="row">-->
                     <!-- Booking Column -->
-                    <!--<div class="col-12 mt-3 left">
+                    <div class="col-12 mt-3 left">
                         <div class="row">
                             <form method="post" >
-                                {% csrf_token="post" %}
+                                <!-- {% csrf_token="post" %}
                                 {{form|crispy}}
-                                {{form.number_of_guests|as_crispy_field}}
+                                {{form.number_of_guests|as_crispy_field}}-->
 
-                                {% for booking in booking_form %}
+                                {% for booking in booking_view %}
                                     <form action="/booking/" method="post">
                                         <label for="number_of_guests">How many guests?<i class="fa-solid fa-users"></i></label>
                                         <input id="number_of_guests" type="text" value="{{ number_of_guests }}"> 

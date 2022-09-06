@@ -1,6 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
-from cloudinary.models import CloudinaryField
 
 
 # Model to book a table = available times+number of guests+guest details
@@ -66,27 +64,32 @@ class Booking(models.Model):
         default=TWO,
     )
 
-    guest = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE, 
-        related_name="booking",
-        default=User,
-    )
-    
-    guest_email = models.EmailField(
-        verbose_name='Email', 
-        blank=True,
-    )
-    
     allergies = models.TextField(
         max_length=100, 
         verbose_name='Allergies',
         blank=True,
     )
 
+    guest_name = models.TextField(
+        max_length=50,
+        verbose_name='Guest',
+        blank=True,
+    )
+
+    guest_email = models.EmailField(
+        verbose_name='Email', 
+        blank=False,
+    )
+
+    guest_phone = models.TextField(
+        max_length=50,
+        verbose_name='Phone',
+        blank=True,
+    )
+
     class Meta:
         ordering = ('booking_day', 'booking_time')
-        unique_together = ('guest', 'booking_day', 'booking_time')
+        unique_together = ('guest_email', 'booking_day', 'booking_time')
 
     def __str__(self):
-        return f'{self.guest} for {self.number_of_guests} on {self.booking_day} at {self.booking_time}'
+        return f'{self.guest_name} for {self.number_of_guests} on {self.booking_day} at {self.booking_time}'

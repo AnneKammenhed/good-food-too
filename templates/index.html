@@ -10,7 +10,7 @@
                     <div class="cover-text">
                         <h2>Book a table at our place:</h2>
                     </div>
-                    <form id="red" action="../book/forms.py" method="post">
+                    <form id="red" action="home" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <input type="submit" value="Book a table">

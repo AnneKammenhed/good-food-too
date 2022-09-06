@@ -23,11 +23,3 @@ class BookingForm(ModelForm):
             'guest_email': 'Your email address',
             'allergies': 'Any allergies?'
         }
-
-
-#        fields = '__all__'
-
-
-# forms.Form
-#    guest = forms.CharField(max_length=100)
-#    email = forms.EmailField()

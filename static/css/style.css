@@ -20,8 +20,7 @@ body {
 
 /* form where input from backend goes */
 #red {
-    height:100px;
-    background: red;
+    height:600px;
 }
 
 #cover-text, #cover-text h2 {
@@ -74,6 +73,12 @@ body {
 .card {
     border: none;
     background-color: transparent;
+}
+
+/* the body of where the form goes */
+.card-body {
+    margin-top: 50px;
+    background: rgb(153, 140, 140);
 }
 
 .image-container {

@@ -7,9 +7,9 @@
         <div class="col-md-4">
             <div class="card mb-4">
                 <div class="card-body">
-                    
-                    <h2 id="cover-text">Book a table:</h2>
-                    
+                    <div class="cover-text">
+                        <h2>Book a table at our place:</h2>
+                    </div>
                     <form id="red" action="../book/forms.py" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}

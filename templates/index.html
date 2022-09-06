@@ -7,43 +7,18 @@
         <div class="col-md-4">
             <div class="card mb-4">
                 <div class="card-body">
+                    
                     <h2 id="cover-text">Book a table:</h2>
-                     
-                    <form id="red" action="" method="post">
+                    
+                    <form id="red" action="../book/forms.py" method="post">
                         {% csrf_token %}
-                        {{ booking_form }}
-                        <input type="submit" value="Send message">
+                        {{ form.as_p }}
+                        <input type="submit" value="Book a table">
                     </form>
-
-                    <form action="book_urls" method="post">
-                        <label for="booking_day">What day do you want to book a table?<i class="fa-regular fa-calendar"></i></label>
-                        <input id="booking_day" list="{{ booking_form.booking_day }}" value="{{ booking_form.booking_day }}"> 
-                        
-                        <label for="booking_time">Do you want to eat early or late? <i class="fa-regular fa-clock"></i></label>
-                        <input id="booking_time" list="{{ booking.booking_time }}" value="{{ booking.booking_time }}"> 
-                       
-                        <label for="number_of_guests">How many guests? <i class="fa-solid fa-users"></i></label>
-                        <input id="number_of_guests" list="{{ booking.number_of_guests }}" value="{{ booking.number_of_guests }}">
-
-                        <label for="guest">What's your name? <i class="fa-regular fa-user"></i></label>
-                        <input id="guest" type="text" value="{{ booking.guest }}">
-
-                        <label for="guest_email">Email? <i class="fa-regular fa-envelope"></i></label>
-                        <input id="guest_email" type="email" value="{{ guest_email }}">
-
-                        <label for="allergies">Do you have any allergies? <i class="fa-solid fa-hand-dots"></i></label>
-                        <input id="allergies" type="text" value="{{ allergies }}">
-
-                        <input type="submit" value="Let's book a table">
-                        
-                    </form>
+                
                 </div>
             </div>    
-        </div>
-        {{ booking.guest }}
-
-        {{ booking.booking_day }}
-        
+        </div>        
     </div>
 </div>
 {% endblock %}

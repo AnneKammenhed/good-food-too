@@ -26,6 +26,8 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 <h1>Background</h1>
 This app is built as the fourth project of my full stack development course that i started in the beginning of May 2022. It is for a restaurant to book a table for max 8 persons online and to give information about any allergies.
 
+<h1>Functions</h1>
+The model allows for anyone to book a table. However it does not allow for the same e-mail adress to book exactly the same day and time.  
 
 <h1>Testing</h1>
 I did some testing before I handed in the project.

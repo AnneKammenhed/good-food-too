@@ -18,9 +18,9 @@ body {
     background:  #445261 no-repeat center;
 }
 
-/* form where input from backend goes */
+/* form from forms.py */
 #red {
-    height:600px;
+    height:1000px;
 }
 
 #cover-text, #cover-text h2 {
@@ -75,9 +75,9 @@ body {
     background-color: transparent;
 }
 
-/* the body of where the form goes */
+/* the body of where the form is */
 .card-body {
-    margin-top: 50px;
+    margin-top: 20px;
     background: rgb(153, 140, 140);
 }
 

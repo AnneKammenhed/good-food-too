@@ -8,26 +8,11 @@
             <div class="card mb-4">
                 <div class="card-body">
                     <div class="cover-text">
-                        <h2>Book a table at our place:</h2>
+                        <h2>Welcome to our place!</h2>
                     </div>
-                    {% if submitted %}
-                        <h3>Thank you for Your booking!</h3>
-
-                    {% else %}
-                    
-                        <form id="red booking_form" method=POST action="" novadlidate>
-                            {% csrf_token %}
-
-                            {{ form.as_p }}
-                            
-                            <div class="submit-row">
-                                <input type="submit" value="Book a table" class="btn btn-secondary default" name="_save">
-                            </div>
-                        </form>
-                    {% endif %}
-                </div>
-            </div>    
-        </div>        
+                </div>    
+            </div>        
+        </div>
     </div>
 </div>
 {% endblock %}

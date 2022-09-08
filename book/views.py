@@ -13,22 +13,28 @@ from .forms import BookingForm
 from .models import Booking
 
 # view to see the bookings form FormView
-class BookingFormView(FormView):
-    template_name = 'index.html'
-    form_class = BookingForm
-    model = Booking
-    success_url = '/home/'
+# class BookingFormView(FormView):
+#    template_name = 'bookings.html'
+#    model = Booking
+#    success_url = '/home/'
 
-    def add_booking(request):
-        submitted = False 
-        if request.method == 'POST':
-            form = BookingForm(request.POST) 
-            if form.is_valid():
-                form.save()
-                return HttpResponseRedirect('home?submitted=True')
-        else:
-            form = BookingForm
-            if 'submitted' in request.GET:
-                submitted = True
-        
-        return render(request, 'index.html', {"form": form_class, 'submitted':sumbitted})
+# function to add valid bookings to the database
+def add_booking(request):
+    submitted = False
+    if request.method == 'POST':
+        booking_form = BookingForm(request.POST)
+        if booking_form.is_valid():
+            booking_form.save()
+            return HttpResponseRedirect('bookings?submitted=True')
+    else:
+        booking_form = BookingForm
+        if 'submitted' in request.GET:
+            submitted = True
+
+    return render(request, 'bookings.html', {'form': booking_form, 'submitted': submitted})
+
+def home(request):
+    return render(request, 'index.html')
+
+def menu(request):
+    return render(request, 'menu.html')

@@ -2,45 +2,46 @@ body {
     background-color: #F9FAFC;
 }
 
-/* hero image and cover text */
+/* hero image */
 
 #hero-outer {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background-color: #6a879b;
+    background-color: #a8bdca;
     position: relative;
 }
 
 #hero-image {
     height: 800px;
     width: 100%;
-    background:  #445261 no-repeat center;
+    background: url('/media/heroimg_goodfood.jpg') no-repeat center;
 }
 
-/* form from forms.py */
-#red {
-    height:1000px;
-}
-
+/* cover text */
 #cover-text, #cover-text h2 {
     color: rgb(34, 33, 33);
 }
 
 #cover-text {
-    font-size: 130%;
+    font-size: 100%;
     letter-spacing: 4px;
 
     width: 700px;
     height: 200px;
 
-    padding-top: 40px;
+    padding-top: 10px;
     padding-left: 10px;
 
     bottom: 300px;
     left: 10px;
 
     position: absolute;
+}
+
+/* form from forms.py */
+#booking-form {
+    height:800px;
 }
 
 .brand {
@@ -77,8 +78,7 @@ body {
 
 /* the body of where the form is */
 .card-body {
-    margin-top: 20px;
-    background: rgb(153, 140, 140);
+    margin-top: 5px;
 }
 
 .image-container {

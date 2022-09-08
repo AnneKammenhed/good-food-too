@@ -11,12 +11,12 @@
                     {% if submitted %}
                         Thank you for Your reservation! Have a look at <a href="{% url 'menu' %}">Our menu!</a>
                     {% else %}
-                <form id="red booking_form" action="" method=POST>
+                <form id="booking_form" action="" method=POST>
                     {% csrf_token %}
 
                     {{ form.as_p }}
 
-                    <input type="submit" value="Book a table" class="btn btn-secondary default" name="_save">
+                    <input type="submit" value="Book a table" class="btn btn-success default" name="_save">
 
                 </form>
                     {% endif %}
